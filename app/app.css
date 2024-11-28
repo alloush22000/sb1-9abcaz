@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.action-bar {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    padding: 12 24;
+    border-radius: 8;
+}
+
+.input-field {
+    padding: 12 16;
+    border-width: 1;
+    border-color: #e5e7eb;
+    border-radius: 8;
+    margin: 8 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8;
+    padding: 16;
+    margin: 8;
+    elevation: 2;
+}

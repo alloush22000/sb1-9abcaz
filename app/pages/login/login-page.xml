@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-gray-100">
+    <ActionBar title="Router Login" class="action-bar" />
+    
+    <StackLayout class="p-4">
+        <TextField hint="Router IP" text="{{ ip }}" class="input-field" keyboardType="url" />
+        <TextField hint="Username" text="{{ username }}" class="input-field" autocorrect="false" />
+        <TextField hint="Password" text="{{ password }}" secure="true" class="input-field" />
+        <Switch text="Enable SSL" checked="{{ ssl }}" class="m-2" />
+        
+        <Button text="Connect" tap="{{ onConnect }}" class="btn-primary" />
+        
+        <ActivityIndicator busy="{{ isLoading }}" class="m-4" />
+        <Label text="{{ error }}" class="text-red-500 text-center" textWrap="true" visibility="{{ error ? 'visible' : 'collapsed' }}" />
+    </StackLayout>
+</Page>

@@ -1,0 +1,19 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-gray-100">
+    <ActionBar title="Available Packages" class="action-bar">
+        <ActionItem text="Logout" tap="{{ onLogout }}" ios.position="right" />
+    </ActionBar>
+    
+    <GridLayout>
+        <ListView items="{{ packages }}" class="list-group" pullToRefresh="true" @pullToRefreshInitiated="onPullToRefresh">
+            <ListView.itemTemplate>
+                <StackLayout class="card">
+                    <Label text="{{ name }}" class="text-lg font-bold" />
+                    <Label text="{{ 'Duration: ' + duration }}" class="text-gray-600" />
+                    <Label text="{{ 'Price: $' + price }}" class="text-gray-600" />
+                    <Button text="Generate Voucher" tap="{{ $parent.onGenerateVoucher }}" class="btn-primary" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        <ActivityIndicator busy="{{ isLoading }}" class="m-4" />
+    </GridLayout>
+</Page>
